@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en"> 
+<head>
+  <title>Login Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+ 
+</head>
+<body onload="startTime()" style = "background-image: url('background.jpg');
+  background-size: cover;">
+ 
+
+ <img src = "qa.jpg" alt = "QA Logo" style="width:250px; height:100px; "/>
+<div style = "font-size:20; color:white; padding:0px 0px 20px 620px;" id="txt"></div>
+ 
+<center>
+  <h1 style = "color:white">Login Page</h1>
+  <div class = "back">
+   <form action = "Task3.html" method = "post">
+	<label for = "email" style = "color:white">Email-ID:</label>
+	<input type = "email" name = "email" id = "email" required/></br></br>
+	<label for = "pwd" style = "color:white">Passowrd:</label>
+	<input type = "password" name = "password" id = "pwd" required/></br></br>
+	<input type = "submit" value = "Login"/>
+   </form><br>
+	<a href = "Task2.html"><button>SignUp</button></a>
+   <h3 style = "color:white">Login Using Facebook</h3><br>
+   <a href = "https://www.facebook.com/" aria-label = "Facebook"><img src = "facebook.png" alt = "facebook logo" style="width:50px; height:50px; background-color: white;"/></a>
+  </div>
+</body>
+
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+</html>
